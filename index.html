@@ -4,11 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-
-    <script defer src="main.js"></script>
+    <script type="module" defer src="main.js"></script>
     <title>Playground</title>
   </head>
   <body>
-    <main></main>
+    <div class="info">
+      <p>
+        <span>
+          * the other day my friend was struggling to come up with a domain
+          name. I thought I could help him out, so I made him this.</span
+        >
+      </p>
+    </div>
+
+    <div id="paragraphContainer"></div>
+    <div class="controls">
+      <button id="updateLinkButton">↺</button>
+      <button id="clearButton">x</button>
+    </div>
+
+    <main>
+      <div id="anchorContainer"></div>
+    </main>
   </body>
 </html>

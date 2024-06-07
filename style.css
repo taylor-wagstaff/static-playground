@@ -5,10 +5,83 @@ html {
 body {
   font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
-  background-color: mintcream;
+  background-color: ivory;
+  margin: 0;
+  padding: 0;
 }
 
 p {
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+button {
+  margin: 0;
+}
+
+.info {
+  font-size: 4rem;
+  line-height: 4.47rem;
+  color: ivory;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+}
+
+.info span {
+  background-color: black;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+}
+
+#updateLinkButton {
+  cursor: pointer;
+  display: block;
+
+  border: none;
+  font-size: 3rem;
+  background-color:mediumaquamarine;
+  width: 4rem;
+  height: 4rem;
+}
+
+#clearButton {
+  cursor: pointer;
+  display: block;
+
+  border: none;
+  font-size: 3rem;
+  background-color:lightcoral;
+  width: 4rem;
+  height: 4rem;
+}
+
+#updateLinkButton:hover,
+#clearButton:hover {
+  background-color: black;
+  color: white; /* Add this if you want the text color to change on hover as well */
+}
+
+#anchorContainer a {
+  text-decoration: none;
+  margin-right: 1rem;
+  word-wrap: break-word;
+  text-decoration: none;
+  background-color: black;
+  color: ivory;
+}
+#anchorContainer a:hover {
+  background-color: ivory;
+  color: black;
+  cursor: pointer;
+}
+
+#favLinks {
+  background-color: ivory;
+  color: black;
+  background-color:lightskyblue;
+  display: inline-block;
+  margin-right: 1rem;
 }
