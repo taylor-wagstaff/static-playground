@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+}
+
+.dimensions-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dimensions-info {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  gap: 0.5rem;
+  font-size: 2rem;
+  color: black;
+  border: 1px solid black;
+}
+
+.movedLines {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+line {
+  stroke: blue;
+  stroke-width: 1;
+}
+
+.dimensions-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -1,4 +1,4 @@
-import { STORY } from './modules/story.js'
+import { STORY } from './story.js'
 
 window.addEventListener('resize', myFunction)
 window.addEventListener('DOMContentLoaded', createButtons)
