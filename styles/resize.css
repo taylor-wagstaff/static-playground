@@ -1,5 +1,16 @@
+html {
+  border: 1px solid blue;
+}
+
 body {
   margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: snow;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .dimensions-container {
@@ -13,14 +24,33 @@ body {
 
 .dimensions-info {
   position: absolute;
-  z-index: 3;
+  z-index: 1; 
   display: flex;
-  flex-direction: row;
-  padding: 1rem;
+  flex-direction: column;
   gap: 0.5rem;
-  font-size: 2rem;
-  color: black;
-  border: 1px solid black;
+  font-size: 15rem;
+  color: snow;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: blue;
+}
+
+#instructions-text {
+  position: absolute;
+  z-index: 3;
+  color: blue;
+  border-right: 1px solid blue;
+  border-bottom: 1px solid blue;
+
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 1rem;
+}
+
+#instructions-text:hover {
+  background-color: blue;
+  color: white;
+  cursor: help;
 }
 
 .movedLines {

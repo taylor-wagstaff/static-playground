@@ -4,6 +4,19 @@ window.addEventListener('resize', () => {
   dimensions()
 })
 
+document.addEventListener('DOMContentLoaded', function () {
+  const instructions = document.querySelector('.dimensions-instructions')
+  const instructionsText = document.getElementById('instructions-text')
+
+  instructions.addEventListener('mouseover', function () {
+    instructionsText.innerText = 'resize window'
+  })
+
+  instructions.addEventListener('mouseout', function () {
+    instructionsText.innerText = '?'
+  })
+})
+
 function myLines() {
   const svgContainer = document.getElementById('svgContainer')
   const dynamicLines = document.querySelectorAll('.dynamicLine')

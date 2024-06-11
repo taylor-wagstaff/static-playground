@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/resize.css" />
     <script type="module" defer src="../modules/resize.js"></script>
-    <title>Dimensions</title>
+    <title>Window Dimensions</title>
   </head>
   <body>
+    <div class="dimensions-instructions">
+      <p id="instructions-text">?</p>
+    </div>
     <div class="dimensions-container">
-      <div class="dimensions-info">
-        <div id="height"><span></span></div>
-        <div id="width"><span></span></div>
-      </div>
       <div class="dimensions-lines">
         <svg class="movedLines" id="svgContainer">
           <line class="dynamicLine" x1="0%" y1="100%" x2="100%" y2="0%" />
           <line class="dynamicLine" x1="0%" y1="0%" x2="100%" y2="100%" />
         </svg>
+      </div>
+      <div class="dimensions-info">
+        <div id="height"><span></span></div>
+        <div id="width"><span></span></div>
       </div>
     </div>
   </body>
