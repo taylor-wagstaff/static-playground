@@ -1,6 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
   const gridContainer = document.querySelector('.grid-container')
 
+  // Coveredareas number
+  let coveredCount = 0
+
+  // sound
+  let foundSound = new Audio('/public/found.mp3')
+  let successSound = new Audio('/public/success.mp3')
+
+  // Restarts the sound
+  function playFoundSound() {
+    foundSound.currentTime = 0
+    foundSound.play()
+  }
+
+  // Restarts the success sound
+  function playSuccessSound() {
+    foundSound.currentTime = 0
+    successSound.currentTime = 0
+    successSound.play()
+  }
+
+  // Counter
+  let count = 0
+  const counter = document.getElementById('count')
+  counter.innerHTML = `${count}`
+
   const cursorStyles = [
     'default',
     'help',
@@ -57,24 +82,75 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
 
     cell.style.cursor = randomCursor
+    cell.dataset.counted = 'false' // data attribute
+    cell.dataset.covered = 'false' // new attribute to track hover
     gridContainer.appendChild(cell)
   }
 
-  const randomIndex = Math.floor(Math.random() * 10000)
-  const randomCell = gridContainer.children[randomIndex]
-  randomCell.style.cursor = findCursor
-  randomCell.style.backgroundColor = 'blue'
+  // Function to generate unique random indices
+  function getUniqueRandomIndices(total, count) {
+    const indices = new Set()
+    while (indices.size < count) {
+      indices.add(Math.floor(Math.random() * total))
+    }
+    return Array.from(indices)
+  }
+
+  const randomIndices = getUniqueRandomIndices(10000, 10)
+  randomIndices.forEach((index) => {
+    gridContainer.children[index].style.cursor = findCursor
+    // gridContainer.children[index].style.backgroundColor = 'blue'
+  })
 
   const targetInfo = document.getElementById('targetCursor')
-  targetInfo.innerHTML = `Find the Cursor: '${findCursor}'`
+  targetInfo.innerHTML = `Find 10 <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/cursor' target='_blank'>&nbsp;'${findCursor}'&nbsp;</a> Cursors:`
+
+  const targetSVG = document.getElementById('cursorSVG')
+  targetSVG.src = `/public/${findCursor}.svg`
 
   for (let i = 0; i < 10000; i++) {
     gridContainer.children[i].addEventListener('mouseover', (event) => {
-      event.target.style.backgroundColor = 'green'
-      if (findCursor === event.target.style.cursor) {
-        alert(`Well done you found the ${findCursor} Cursor!`)
-        window.location.reload()
+      const cell = event.target
+
+      if (cell.dataset.covered === 'false') {
+        cell.style.backgroundColor = 'gainsboro'
+        coveredCount++
+        cell.dataset.covered = 'true' // Mark the cell as covered
+      }
+
+      // create the svg that's hovered over
+      const currentSVG = document.getElementById('currentSVG')
+      currentSVG.src = `/public/${cell.style.cursor}.svg`
+
+      const winCursor = document.getElementById('winCursor')
+
+      const showCoveredCount = document.getElementById('coveredCount')
+      showCoveredCount.innerHTML = `${coveredCount}`
+      console.log(coveredCount)
+
+      // Check if the cell's cursor is the target and if it hasn't been counted yet
+      if (
+        cell.style.cursor === findCursor &&
+        cell.dataset.counted === 'false'
+      ) {
+        count++
+        cell.dataset.counted = 'true' // Mark the cell as counted
+        counter.innerHTML = `${count}`
+        // Change color to indicate found in map
+        cell.style.backgroundColor = 'darkorange'
+        playFoundSound()
+
+        if (count === 10) {
+          winCursor.innerHTML = `All '${findCursor}' Cursors found!`
+          playSuccessSound()
+        }
       }
     })
   }
+
+  const refreshButton = document.getElementById('refreshButton')
+  refreshButton.addEventListener('click', () => {
+    location.reload()
+    count = 0
+  })
 })

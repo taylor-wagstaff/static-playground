@@ -1,0 +1,107 @@
+:root {
+  --system-ui: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: var(--system-ui);
+  background-color: snow;
+}
+
+
+img {
+  width: 128px;
+  height: 183px;
+}
+
+.header-container {
+  height: 150px;
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  color: blue;
+  
+  font-size: 2rem;
+}
+
+.header-container p {
+  margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+/* Contains all div holding books */
+.books-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap;
+  min-height: 100vh;
+}
+
+/* Is the title, number, and plus */
+.book-info {
+  box-shadow: -5px 0px 5px -6px black, 5px 0px 5px -6px black;
+  border: 1px solid blue; /* Apply border to all sides */
+  border-bottom: none;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  cursor: pointer; /* Add cursor pointer for better UX */
+  max-width: 500px;
+}
+
+/* .book-info:hover {
+  background-color: blue;
+  color: white;
+} */
+
+/* Reveals contained information */
+.reveal-text {
+  display: none;
+}
+
+/* Information with image and content */
+.book-content-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  background-color: white;
+}
+
+.book-image {
+  margin: 1rem;
+}
+
+.book-synopsis {
+  padding: 1rem;
+  max-width: 100%;
+
+  color: black;
+  word-wrap: break-word; /* Ensure long words break */
+  overflow-wrap: break-word; /* Alternative method */
+  white-space: normal; /* Ensure normal whitespace handling */
+}
+
+.title-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+  margin-top: 1rem;
+}
+
+.title-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title-right {
+  display: flex;
+
+  align-items: center;
+  margin-bottom: 1rem;
+}

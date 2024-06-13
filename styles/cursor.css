@@ -3,9 +3,24 @@
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
+/* darkseagreen; */
+
 body {
-  background-color: gainsboro;
+  background-color: floralwhite;
   font-family: var(--system-ui);
+}
+
+a {
+  color: blue;
+}
+
+a:hover {
+  color: red;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .grid-container {
@@ -14,15 +29,141 @@ body {
   grid-template-columns: repeat(100, 1fr);
   height: 100vh;
 
-  background-color: whitesmoke;
+  background-color: white;
+  box-shadow: 0 8px 6px -6px black;
+  border: 1px solid black;
 }
 
 .info-container {
-  background-color: green;
-  color: whitesmoke;
+  color: black;
+  display: grid;
+  grid-template-columns: 0.3fr 0.2fr 0.5fr 0.1fr 0.1fr 0.5fr;
+  grid-template-areas: 'targetCursor matchInfo  winCursor coveredCount count refreshButton';
+  align-items: center;
 }
 
-p {
-  margin-block-start: 0;
-  margin-block-end: 0;
+/* area for the find 10 */
+#targetCursor {
+  grid-area: targetCursor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  height: 100%;
+
+  box-shadow: 0 -8px 6px -9px black;
+
+  background-color: white;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+/* shows cursor svgs */
+.matchInfo {
+  grid-area: matchInfo;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+}
+
+#equals {
+  text-align: center;
+  font-size: 2rem;
+}
+
+#cursorSVG {
+  height: 2rem;
+  width: 2rem;
+}
+
+#currentSVG {
+  height: 2rem;
+  width: 2rem;
+}
+
+/* counts the number of covered squares */
+
+#coveredCount {
+  grid-area: coveredCount;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  height: 100%;
+
+  box-shadow: 0 -8px 6px -9px black;
+
+  background-color: gainsboro;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+/* counts the number of found winning squares */
+#count {
+  grid-area: count;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: darkorange;
+
+  /* Center the text both horizontally and vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  box-shadow: 0 -8px 6px -9px black;
+
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+/* description of winning */
+
+#winCursor {
+  grid-area: winCursor;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* button to refresh the game */
+
+#refreshButton {
+  grid-area: refreshButton;
+  border: none;
+  background-color: aquamarine;
+
+  font-size: 1rem;
+  cursor: pointer;
+  height: 100%;
+
+  box-shadow: 0 -8px 6px -9px black;
+
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+#refreshButton:hover {
+  background-color: white;
+  color: black;
 }
