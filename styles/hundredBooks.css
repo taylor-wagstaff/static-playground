@@ -9,7 +9,7 @@ body {
   font-size: 14px;
   font-family: var(--system-ui);
 
-  background-color: snow;
+  background-color: blue;
 }
 
 img {
@@ -17,12 +17,41 @@ img {
   height: 183px;
 }
 
+#information {
+  margin-left: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+button {
+  font-family: var(--system-ui);
+  background-color: snow;
+
+  cursor: pointer;
+
+  color: black;
+  background-color:gold;
+  border: none;
+ 
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.4rem;
+}
+
+button:hover {
+  color: snow;
+  background-color: blue;
+}
+
 .header-container {
   height: 150px;
   display: flex;
   justify-content: right;
-  align-items: flex-end;
-  color: gainsboro;
+
+  color: whitesmoke;
 }
 
 .header-container p {
@@ -30,7 +59,9 @@ img {
   margin-block-end: 0em;
   /* margin-left: 1rem;
   margin-top: 1rem; */
-  font-size: 10rem;
+  font-size: 15rem;
+  min-height: min-content;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* Contains all div holding books */
@@ -45,12 +76,14 @@ img {
 /* Is the title, number, and plus */
 .book-info {
   box-shadow: -5px 0px 5px -6px black, 5px 0px 5px -6px black;
-  border: 1px solid blue; /* Apply border to all sides */
+  border: 1px solid white; /* Apply border to all sides */
   border-bottom: none;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   /* Add cursor pointer for better UX */
-  max-width: 500px;
+  /* max-width: 500px; */
+  display: flex;
+  justify-content: center;
 }
 
 .book-info:hover {
@@ -78,8 +111,8 @@ img {
 
 .book-synopsis {
   padding: 1rem;
-  max-width: 100%;
-
+  /* max-width: 100%; */
+  min-width: 400px;
   color: black;
   word-wrap: break-word; /* Ensure long words break */
   overflow-wrap: break-word; /* Alternative method */
