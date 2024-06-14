@@ -1,168 +1,23 @@
 import { booksData } from './bookData.js'
 
-let CSS_COLORS = [
-  'aliceblue',
-  'antiquewhite',
-  'aqua',
-  'aquamarine',
-  'azure',
-  'beige',
-  'bisque',
-  'black',
-  'blanchedalmond',
-  'blue',
-  'blueviolet',
-  'brown',
-  'burlywood',
-  'cadetblue',
-  'chartreuse',
-  'chocolate',
-  'coral',
-  'cornflowerblue',
-  'cornsilk',
-  'crimson',
-  'cyan',
-  'darkblue',
-  'darkcyan',
-  'darkgoldenrod',
-  'darkgray',
-  'darkgrey',
-  'darkgreen',
-  'darkkhaki',
-  'darkmagenta',
-  'darkolivegreen',
-  'darkorange',
-  'darkorchid',
-  'darkred',
-  'darksalmon',
-  'darkseagreen',
-  'darkslateblue',
-  'darkslategray',
-  'darkslategrey',
-  'darkturquoise',
-  'darkviolet',
-  'deeppink',
-  'deepskyblue',
-  'dimgray',
-  'dimgrey',
-  'dodgerblue',
-  'firebrick',
-  'floralwhite',
-  'forestgreen',
-  'fuchsia',
-  'gainsboro',
-  'ghostwhite',
-  'gold',
-  'goldenrod',
-  'gray',
-  'grey',
-  'green',
-  'greenyellow',
-  'honeydew',
-  'hotpink',
-  'indianred',
-  'indigo',
-  'ivory',
-  'khaki',
-  'lavender',
-  'lavenderblush',
-  'lawngreen',
-  'lemonchiffon',
-  'lightblue',
-  'lightcoral',
-  'lightcyan',
-  'lightgoldenrodyellow',
-  'lightgray',
-  'lightgrey',
-  'lightgreen',
-  'lightpink',
-  'lightsalmon',
-  'lightseagreen',
-  'lightskyblue',
-  'lightslategray',
-  'lightslategrey',
-  'lightsteelblue',
-  'lightyellow',
-  'lime',
-  'limegreen',
-  'linen',
-  'magenta',
-  'maroon',
-  'mediumaquamarine',
-  'mediumblue',
-  'mediumorchid',
-  'mediumpurple',
-  'mediumseagreen',
-  'mediumslateblue',
-  'mediumspringgreen',
-  'mediumturquoise',
-  'mediumvioletred',
-  'midnightblue',
-  'mintcream',
-  'mistyrose',
-  'moccasin',
-  'navajowhite',
-  'navy',
-  'oldlace',
-  'olive',
-  'olivedrab',
-  'orange',
-  'orangered',
-  'orchid',
-  'palegoldenrod',
-  'palegreen',
-  'paleturquoise',
-  'palevioletred',
-  'papayawhip',
-  'peachpuff',
-  'peru',
-  'pink',
-  'plum',
-  'powderblue',
-  'purple',
-  'red',
-  'rosybrown',
-  'royalblue',
-  'saddlebrown',
-  'salmon',
-  'sandybrown',
-  'seagreen',
-  'seashell',
-  'sienna',
-  'silver',
-  'skyblue',
-  'slateblue',
-  'slategray',
-  'slategrey',
-  'snow',
-  'springgreen',
-  'steelblue',
-  'tan',
-  'teal',
-  'thistle',
-  'tomato',
-  'turquoise',
-  'violet',
-  'wheat',
-  'white',
-  'whitesmoke',
-  'yellow',
-  'yellowgreen',
-]
 function renderBooks(books) {
   const container = document.getElementById('books-container')
-  if (!container) {
-    console.error('Container not found')
+  const header = document.getElementById('header-number')
+
+  if (!container || !header) {
+    console.error('Container or Header not found')
     return
   }
 
-  books.forEach((book) => {
+  books.forEach((book, index) => {
     const bookInfo = document.createElement('div')
     bookInfo.className = 'book-info'
 
     const titleInfo = document.createElement('div')
     titleInfo.className = 'title-info'
-    titleInfo.style.writingMode = 'vertical-rl' // Initial writing-mode
+    titleInfo.style.writingMode = 'vertical-rl'
+    titleInfo.style.alignItems = 'center'
+    titleInfo.style.marginTop = '1rem'
 
     const titleLeft = document.createElement('div')
     titleLeft.className = 'title-left'
@@ -191,40 +46,36 @@ function renderBooks(books) {
       </div>
     `
 
-    let isMouseOver = false // Flag to track mouseover state
-
-    // Mouseover event handler
-    bookInfo.addEventListener('mouseover', () => {
-      if (!isMouseOver) {
-        const randomColor =
-          CSS_COLORS[Math.floor(Math.random() * CSS_COLORS.length)]
-        bookInfo.style.backgroundColor = randomColor
-        isMouseOver = true // Set flag to true after changing color
-      }
-    })
-
-    // Mouseout event handler
-    bookInfo.addEventListener('mouseout', () => {
-      bookInfo.style.backgroundColor = 'white'
-      isMouseOver = false // Reset flag to false on mouseout
-    })
-
     // Click event handler
     bookInfo.addEventListener('click', () => {
       if (
         revealText.style.display === 'none' ||
         revealText.style.display === ''
       ) {
+        titleInfo.style.alignItems = 'normal'
+
+        // if clicked
         revealText.style.display = 'block'
         titleInfo.style.writingMode = 'horizontal-tb'
-        titleRight.innerHTML = `<p> &nbsp;&nbsp;&nbsp;-</p>`
-        titleRight.style.color = 'white'
+
+        titleRight.innerHTML = `<p></p>`
       } else {
+        // back to book view after clicked
         revealText.style.display = 'none'
         titleInfo.style.writingMode = 'vertical-rl'
         titleRight.innerHTML = `<p>${book.detailsButton.text}</p>`
         titleRight.style.color = 'blue'
+        titleInfo.style.alignItems = 'center'
       }
+    })
+
+    // Add hover event listeners to each bookInfo div
+    bookInfo.addEventListener('mouseover', () => {
+      header.innerText = `${(index + 1).toString().padStart(3, '0')}` // Display the index number (1-based) padded to three digits
+    })
+
+    bookInfo.addEventListener('mouseout', () => {
+      header.innerText = '100' // Reset to original content or whatever you want
     })
 
     bookInfo.appendChild(titleInfo)
