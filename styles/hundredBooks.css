@@ -9,7 +9,7 @@ body {
   font-size: 14px;
   font-family: var(--system-ui);
 
-  background-color: blue;
+  background-color: whitesmoke;
 }
 
 img {
@@ -17,40 +17,40 @@ img {
   height: 183px;
 }
 
-#information {
-  margin-left: 1rem;
+.information-text {
+  color:lemonchiffon;
+  max-width: 320px;
+
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: brown;
+  /* border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem; */
+  border-radius: 1rem;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.information-text p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+#myBtn {
   color: white;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-}
-
-button {
-  font-family: var(--system-ui);
-  background-color: snow;
-
-  cursor: pointer;
-
-  color: black;
-  background-color:gold;
   border: none;
- 
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 0.4rem;
+  background-color: brown;
+  cursor: pointer;
 }
 
-button:hover {
-  color: snow;
-  background-color: blue;
+#myBtn:hover {
+  color: blue;
 }
 
 .header-container {
   height: 150px;
   display: flex;
   justify-content: right;
-
+  align-items: center;
   color: whitesmoke;
 }
 
@@ -59,9 +59,25 @@ button:hover {
   margin-block-end: 0em;
   /* margin-left: 1rem;
   margin-top: 1rem; */
-  font-size: 15rem;
+  font-size: 17rem;
   min-height: min-content;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: lemonchiffon;
+}
+
+.header-book-title-container {
+  display: flex;
+  justify-content: right;
+  color: brown;
+  margin-bottom: 1rem;
+}
+
+#header-book-title {
+  font-size: 1rem;
+}
+
+#more {
+  display: none;
 }
 
 /* Contains all div holding books */
@@ -76,7 +92,7 @@ button:hover {
 /* Is the title, number, and plus */
 .book-info {
   box-shadow: -5px 0px 5px -6px black, 5px 0px 5px -6px black;
-  border: 1px solid white; /* Apply border to all sides */
+  border: 1px solid brown; /* Apply border to all sides */
   border-bottom: none;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
@@ -87,7 +103,7 @@ button:hover {
 }
 
 .book-info:hover {
-  background-color: blue;
+  background-color: lavender;
   color: white;
 }
 

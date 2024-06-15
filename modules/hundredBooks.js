@@ -7,6 +7,9 @@ function getRandomMinHeight(min, max) {
 function renderBooks(books) {
   const container = document.getElementById('books-container')
   const header = document.getElementById('header-number')
+  const headerBookTitle = document.getElementById('header-book-title')
+
+  headerBookTitle.innerText = ' '
 
   if (!container || !header) {
     console.error('Container or Header not found')
@@ -20,6 +23,7 @@ function renderBooks(books) {
     // Generate a unique random min-height for each book-info
     const randomMinHeight = getRandomMinHeight(70, 150)
     bookInfo.style.minWidth = `${randomMinHeight}px`
+    // container.style.maxHeight = `${randomMinHeight}px`
 
     const titleInfo = document.createElement('div')
     titleInfo.className = 'title-info'
@@ -76,8 +80,7 @@ function renderBooks(books) {
         // back to book view after clicked
         revealText.style.display = 'none'
         titleInfo.style.writingMode = 'vertical-rl'
-        // titleRight.innerHTML = `<p>seen</p>`
-        // titleRight.style.color = 'blue'
+
         titleInfo.style.alignItems = 'center'
 
         // return back to normal
@@ -91,11 +94,13 @@ function renderBooks(books) {
 
     // Add hover event listeners to each bookInfo div
     bookInfo.addEventListener('mouseover', () => {
-      header.innerText = `${(index + 1).toString().padStart(3, '0')}` // Display the index number (1-based) padded to three digits
+      header.innerText = `${(index + 1).toString().padStart(3, '0')}`
+      headerBookTitle.innerText = `${book.title}`
     })
 
     bookInfo.addEventListener('mouseout', () => {
       header.innerText = '100' // Reset to original content or whatever you want
+      headerBookTitle.innerText = ' '
     })
 
     bookInfo.appendChild(titleInfo)
@@ -107,21 +112,21 @@ function renderBooks(books) {
 
 document.addEventListener('DOMContentLoaded', () => {
   renderBooks(booksData.books)
-  const informationButton = document.getElementById('information-button')
-  const informationText = document.getElementById('information-text')
-  const additionalText =
-    ' to help anyone who is learning art. Most of these books I wish I read earlier. Some I only encountered when I was ready for them. Others I didnt understand at first and reread them later. '
+  const myBtn = document.getElementById('myBtn')
 
-  informationButton.addEventListener('click', () => {
-    if (informationText) {
-      if (informationText.innerText.includes(additionalText)) {
-        informationText.innerText = informationText.innerText.replace(
-          additionalText,
-          ''
-        )
-      } else {
-        informationText.innerText += additionalText
-      }
+  myBtn.addEventListener('click', () => {
+    const dots = document.getElementById('dots')
+    const moreText = document.getElementById('more')
+    const btnText = document.getElementById('myBtn')
+
+    if (dots.style.display === 'none') {
+      dots.style.display = 'inline'
+      btnText.innerHTML = '+'
+      moreText.style.display = 'none'
+    } else {
+      dots.style.display = 'none'
+      btnText.innerHTML = '-'
+      moreText.style.display = 'inline'
     }
   })
 })
