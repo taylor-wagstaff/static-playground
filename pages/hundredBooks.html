@@ -10,26 +10,28 @@
   <body>
     <header>
       <!-- https://www.the-art-of-web.com/javascript/truncate-expand-text/ -->
-      <div class="information-text">
-        <p>
-          a curated selection of one hundred books<span id="dots">...</span
-          ><span id="more"
-            >&nbsp;to help anyone who is learning art. Most of these books I
-            wish I read earlier. Some I only encountered when I was ready for
-            them. Others I didnt understand at first and reread them later.
-          </span>
-          <button id="myBtn">+</button>
-        </p>
+      <div class="information-text-continer">
+        <div class="information-text" id="clickDiv">
+          <p>
+            a curated selection of one hundred books<span id="dots">...</span
+            ><span id="more"
+              >&nbsp;to help anyone who is learning art. Most of these books I
+              wish I read earlier. Some I only encountered when I was ready for
+              them. Others I didnt understand at first and reread them later.
+            </span>
+            <button id="myBtn">+</button>
+          </p>
+        </div>
       </div>
 
       <div class="number-title-container">
-      <div class="header-book-title-container">
-        <p><span id="header-book-title">&nbsp;</span>&nbsp;</p>
+        <div class="header-book-title-container">
+          <p><span id="header-book-title">&nbsp;</span>&nbsp;</p>
+        </div>
+        <div class="header-container">
+          <p><span id="header-number">100</span></p>
+        </div>
       </div>
-      <div class="header-container">
-        <p><span id="header-number">100</span></p>
-      </div>
-    </div>
     </header>
     <main>
       <div class="books-container" id="books-container">

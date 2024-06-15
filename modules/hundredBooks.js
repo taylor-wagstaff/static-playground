@@ -33,7 +33,7 @@ function renderBooks(books) {
 
     const titleLeft = document.createElement('div')
     titleLeft.className = 'title-left'
-    titleLeft.innerHTML = `<p>${book.id}</p><p class="book-title">${book.title}</p><p style="color: blue">+</p>`
+    titleLeft.innerHTML = `<p>${book.id}</p><p class="book-title">${book.title}</p><p style="color: whitesmoke">+</p>`
 
     const titleRight = document.createElement('div')
     titleRight.className = 'title-right'
@@ -88,7 +88,7 @@ function renderBooks(books) {
         bookInfo.style.display = 'flex' // Turn off display: flex;
         bookInfo.style.justifyContent = 'center' // Turn off justify-content: center;
 
-        titleLeft.innerHTML = `<p>${book.id}</p><p class="book-title">${book.title}</p><p style="color: white">+</p>`
+        titleLeft.innerHTML = `<p>${book.id}</p><p class="book-title">${book.title}</p><p style="color: blue">+</p>`
       }
     })
 
@@ -112,9 +112,9 @@ function renderBooks(books) {
 
 document.addEventListener('DOMContentLoaded', () => {
   renderBooks(booksData.books)
-  const myBtn = document.getElementById('myBtn')
+  const clickDiv = document.getElementById('clickDiv')
 
-  myBtn.addEventListener('click', () => {
+  clickDiv.addEventListener('click', () => {
     const dots = document.getElementById('dots')
     const moreText = document.getElementById('more')
     const btnText = document.getElementById('myBtn')
