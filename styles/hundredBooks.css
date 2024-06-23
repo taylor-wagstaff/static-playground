@@ -18,21 +18,31 @@ img {
 }
 
 .information-text-continer {
-  height: 108px;
+  display: flex;
+  justify-content: right;
 }
 
 .information-text {
-  color: lemonchiffon;
-  max-width: 320px;
-
+  color: blue;
+  max-width: fit-content;
+  height: 50px;
+  /* display: flex;
+  justify-content: right; */
   padding: 1rem;
   margin: 0.5rem;
-  background-color: brown;
+  background-color: whitesmoke;
+
   /* border-bottom-right-radius: 1rem;
   border-top-right-radius: 1rem; */
-  border-radius: 1rem;
-  box-shadow: 0 8px 6px -6px black;
+  /* border-radius: 1rem; */
+
   cursor: pointer;
+
+  margin-bottom: 4rem;
+}
+
+.information-text:hover {
+  color: blue;
 }
 
 .information-text p {
@@ -41,40 +51,43 @@ img {
 }
 
 #myBtn {
-  color: white;
+  color: blue;
   border: none;
-  background-color: brown;
+  background-color: whitesmoke;
   cursor: pointer;
 }
 
-#myBtn:hover {
-  color: blue;
+.number-title-container {
+  display: flex;
+  flex-direction: column;
 }
 
+/* Contains Book Number */
 .header-container {
   height: 150px;
-  display: flex;
-  justify-content: right;
-  align-items: center;
+  width: 150px;
+  /* display: flex;
+  justify-content: right; */
+  /* align-items: center; */
   color: whitesmoke;
 }
 
 .header-container p {
   margin-block-start: 0em;
   margin-block-end: 0em;
-  /* margin-left: 1rem;
-  margin-top: 1rem; */
   font-size: 17rem;
-  min-height: min-content;
+  line-height: 0.75em;
+
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: lemonchiffon;
 }
 
+/* Contains book title */
+
 .header-book-title-container {
-  display: flex;
-  justify-content: right;
+  /* display: flex;
+  justify-content: right; */
   color: brown;
-  margin-bottom: 1rem;
 }
 
 #header-book-title {

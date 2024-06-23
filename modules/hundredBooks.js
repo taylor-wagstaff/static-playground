@@ -99,7 +99,7 @@ function renderBooks(books) {
     })
 
     bookInfo.addEventListener('mouseout', () => {
-      header.innerText = '100' // Reset to original content or whatever you want
+      header.innerText = '000' // Reset to original content or whatever you want
       headerBookTitle.innerText = ' '
     })
 
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (dots.style.display === 'none') {
       dots.style.display = 'inline'
-      btnText.innerHTML = '+'
+      btnText.innerHTML = '?'
       moreText.style.display = 'none'
     } else {
       dots.style.display = 'none'
