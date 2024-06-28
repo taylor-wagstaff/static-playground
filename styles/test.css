@@ -1,46 +1,39 @@
 body {
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 
-ul {
+p {
   margin-block-start: 0;
   margin-block-end: 0;
 }
 
-.piano-keys-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-}
+#parent {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
 
-.piano-keys {
-  width: 20rem;
-  cursor: pointer;
-  position: relative;
-  height: 5rem;
-  border: 1px solid #000;
+  margin: 0;
+  width: 100vh;
 }
-
-.white-key {
-  background-color: #fff;
+.hour-paragraph {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  height: 100px;
+  width: 100px;
 }
-
-.white-key:hover {
-  background-color: gainsboro;
+.minute-paragraph {
+  background-color: blue;
+  color: white;
+  padding: 1rem;
+  height: 100px;
+  width: 100px;
 }
-
-.black-key {
-  width: 13rem;
-  height: 2rem;
-  border-radius: 5px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  background-color: #000;
-  z-index: 2;
-  margin: -20px 0px -20px 0px;
-}
-
-.black-key:hover {
-  background-color: grey;
+.second-paragraph {
+  background-color: red;
+  color: white;
+  padding: 1rem;
+  height: 100px;
+  width: 100px;
 }
