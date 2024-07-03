@@ -96,14 +96,14 @@ document.addEventListener('DOMContentLoaded', () => {
     return Array.from(indices)
   }
 
-  const randomIndices = getUniqueRandomIndices(10000, 10)
+  const randomIndices = getUniqueRandomIndices(10000, 100)
   randomIndices.forEach((index) => {
     gridContainer.children[index].style.cursor = findCursor
     // gridContainer.children[index].style.backgroundColor = 'blue'
   })
 
   const targetInfo = document.getElementById('targetCursor')
-  targetInfo.innerHTML = `Find 10 <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/cursor' target='_blank'>&nbsp;'${findCursor}'&nbsp;</a> Cursors:`
+  targetInfo.innerHTML = `Find 100 <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/cursor' target='_blank'>&nbsp;'${findCursor}'&nbsp;</a> Cursors:`
 
   const targetSVG = document.getElementById('cursorSVG')
   targetSVG.src = `/public/${findCursor}.svg`
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cell.style.backgroundColor = 'darkorange'
         playFoundSound()
 
-        if (count === 10) {
+        if (count === 100) {
           winCursor.innerHTML = `All '${findCursor}' Cursors found!`
           playSuccessSound()
         }
