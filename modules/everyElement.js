@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   let hoverText = ''
 
-
   // Function to copy text to clipboard
   function copyToClipboard(text) {
     const textarea = document.createElement('textarea')
@@ -19,12 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // add hover state
       event.target.style.color = 'blue'
-      event.target.style.cursor = 'copy'
+      event.target.style.cursor = 'pointer'
     })
 
     element.addEventListener('mouseout', (event) => {
       hoverText = ''
       event.target.style.color = 'black'
+      event.target.style.cursor = 'default'
     })
   })
 

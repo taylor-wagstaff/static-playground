@@ -5,11 +5,12 @@
 
 body {
   font-family: var(--system-ui);
-  margin: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   padding: 0;
   font-weight: 100;
   font-size: 16px;
-  background-color: lightgreen;
+  background-color: snow;
 }
 
 p {
