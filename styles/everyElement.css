@@ -1,6 +1,7 @@
 :root {
   --system-ui: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --site-gutter: clamp(1rem, -76.4px + 19.25vw, 170px);
 }
 
 body {
@@ -8,8 +9,7 @@ body {
   margin-left: 2rem;
   margin-right: 2rem;
   padding: 0;
-  font-weight: 100;
-  font-size: 16px;
+  font-size: clamp(1.125rem, 1.05rem + 0.25vw, 1.25rem);
   background-color: snow;
   overflow: auto;
 }
@@ -17,12 +17,12 @@ body {
 #info {
   font-size: 2rem;
 
-  background-color: aliceblue;
+  background-color:springgreen;
 
   padding: 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
-  font-weight: 400;
+  font-weight: 500;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -48,6 +48,11 @@ h6 {
   display: inline-block;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  width: max-content;
+  background-color: aliceblue;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  padding: 0.5rem;
 }
 
 .headings {

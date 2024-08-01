@@ -6,14 +6,12 @@
 
     <link rel="stylesheet" href="/styles/everyElement.css" />
     <script type="module" defer src="../modules/everyElement.js"></script>
-    <title>Every Element</title>
+    <title>Every HTML Element</title>
   </head>
   <body>
     <div class="container">
+      <p id="info">Every HTML Element</p>
 
-        <p id="info">Every HTML Element</p>
-
-      <hr />
       <div id="top" class="page" role="document">
         <h1>&lt;h1&gt;This is a heading at level 1 size&lt;/h1&gt;</h1>
 
@@ -368,19 +366,18 @@ P R E F O R M A T T E D T E X T
                     width="300px"
                   />
                   <figcaption>
-                    &lt;img
-                    src="https://d2w9rnfcy7mm78.cloudfront.net/838549/original_aff867f28526cbcac3f26dc681f08078.jpg?1484739484?bc=1"
+                    &lt;img src="https://d2w9rnfcy7mm78.cloudfront.net/"
                     alt="Image alt
                     text"&gt;&lt;/img&gt;&lt;figcaption&gt;Caption in
                     here&lt;/figcaption&gt;
                   </figcaption>
                 </figure>
               </div>
-              <h4>
-                &lt;h4&gt;&lt;'picture' element contains zero or more 'source'
+              <p>
+                &lt;p&gt;'picture' element contains zero or more 'source'
                 elements and one 'img' element to provide versions of an image
-                for different display/device scenarios &lt;/h4&gt;
-              </h4>
+                for different display/device scenarios &lt;/p&gt;
+              </p>
               <p>
                 &lt;picture&gt;&lt;source media="(min-width: 650px)"
                 srcset="img_pink_flowers.jpg" /&gt;&lt;source media="(min-width:
@@ -388,20 +385,24 @@ P R E F O R M A T T E D T E X T
                 src="img_orange_flowers.jpg" alt="Flowers" style="width: auto"
                 /&gt;&lt;/picture&gt;
               </p>
+              <hr />
             </article>
             <article id="embedded__audio">
               <p>&lt;audio controls="link to audio"&gt;Audio&lt;/audio&gt;</p>
 
               <div><audio controls="">audio</audio></div>
+              <hr />
             </article>
             <article id="embedded__video">
               <p>&lt;video controls="link to video"&gt;Video&lt;/video&gt;</p>
 
               <div><video controls="">video</video></div>
+              <hr />
             </article>
             <article id="embedded__canvas">
               <p>&lt;canvas&gt;Canvas&lt;/canvas&gt;</p>
               <div><canvas>canvas</canvas></div>
+              <hr />
             </article>
             <article id="embedded__meter">
               <p>
@@ -410,11 +411,13 @@ P R E F O R M A T T E D T E X T
               </p>
 
               <div><meter value="2" min="0" max="10">2 out of 10</meter></div>
+              <hr />
             </article>
             <article id="embedded__progress">
               <p>&lt;progress&gt;Progress&lt;/progress&gt;</p>
 
               <div><progress>progress</progress></div>
+              <hr />
             </article>
             <article id="embedded__svg">
               <p>
@@ -427,6 +430,7 @@ P R E F O R M A T T E D T E X T
                   <circle cx="100" cy="100" r="100" fill="#1fa3ec"></circle>
                 </svg>
               </div>
+              <hr />
             </article>
             <article id="embedded__iframe">
               <p>
@@ -437,6 +441,7 @@ P R E F O R M A T T E D T E X T
               <div>
                 <iframe src="https://www.are.na/" height="300"></iframe>
               </div>
+              <hr />
             </article>
           </section>
           <section id="forms">
@@ -752,7 +757,7 @@ P R E F O R M A T T E D T E X T
         </main>
         <footer role="contentinfo">
           <p>
-            some of the content for this site is from:
+           Some of the content for this site is by Chris Bracco at:
             <a href="http://github.com/cbracco/html5-test-page">GitHub</a>.
           </p>
           <p>Made by Taylor Wagstaff</p>
