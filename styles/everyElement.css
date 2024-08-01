@@ -78,3 +78,7 @@ th {
   display: flex;
   flex-direction: column;
 }
+
+object {
+  border: 2px solid blue;
+}
