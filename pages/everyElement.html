@@ -12,11 +12,38 @@
     <title>Every HTML Element</title>
   </head>
   <body>
-    <div class="container">
+    <div id="top" class="container">
       <p id="info">Every HTML Element</p>
-
-      <div id="top" class="page" role="document">
-        <h1>&lt;h1&gt;This is a heading at level 1 size&lt;/h1&gt;</h1>
+      <section>
+        <p class="des-headings">
+          This is not a how-to-guide, there are plenty of those around, rather
+          it is a quick reference list of all HTML elements. I have kept the
+          content light in description, however, there are links below each
+          section for further information.
+        </p>
+      </section>
+      <section>
+        <h3 id="content-heading">Contents:</h3>
+        <ul>
+          <li><a href="#headings">Headings</a></li>
+          <li><a href="#text__paragraphs">Paragraphs</a></li>
+          <li><a href="#lists">Lists</a></li>
+          <li><a href="#document-elements">Document Elements in HTML</a></li>
+          <li><a href="#html-template">HTML Document Template</a></li>
+          <li><a href="#formatted-text">Formatted Text</a></li>
+          <li><a href="#the-table-element">The Table Element</a></li>
+          <li><a href="#embedded-content">Embedded Content</a></li>
+          <li><a href="#form-elements">Form Elements</a></li>
+          <li>
+            <a href="#further-resources-for-HTML">Further Resources for HTML</a>
+          </li>
+        </ul>
+        <hr />
+      </section>
+      <div class="page" role="document">
+        <h1 id="headings">
+          &lt;h1&gt;This is a heading at level 1 size&lt;/h1&gt;
+        </h1>
 
         <main role="main">
           <section id="text">
@@ -99,7 +126,7 @@
             </article>
             <hr />
             <header>
-              <h1 style="background-color: springgreen">
+              <h1 id="lists" style="background-color: springgreen">
                 &lt;h1&gt;Lists&lt;/h1&gt;
               </h1>
             </header>
@@ -148,7 +175,7 @@
               </div>
             </article>
             <header>
-              <h1 style="background-color: springgreen">
+              <h1 style="background-color: springgreen" id="document-elements">
                 &lt;h1&gt;Document Elements in HTML&lt;/h1&gt;
               </h1>
             </header>
@@ -286,7 +313,7 @@
               <hr />
             </section>
             <header>
-              <h1 style="background-color: springgreen">
+              <h1 style="background-color: springgreen" id="html-template">
                 &lt;h1&gt;HTML Document Template&lt;/h1&gt;
               </h1>
             </header>
@@ -349,7 +376,7 @@
               <hr />
             </section>
             <header>
-              <h1 style="background-color: springgreen">
+              <h1 style="background-color: springgreen" id="formatted-text">
                 &lt;h1&gt;Formatted Text&lt;/h1&gt;
               </h1>
             </header>
@@ -538,7 +565,7 @@ P R E F O R M A T T E D T E X T
               >
             </div>
             <hr />
-            <article id="text__tables">
+            <article id="the-table-element">
               <header><h3>&lt;h3&gt;The Table element&lt;h3&gt;</h3></header>
               <table>
                 <caption>
@@ -618,7 +645,7 @@ P R E F O R M A T T E D T E X T
             <br />
             <hr />
             <header>
-              <h1 style="background-color: springgreen">
+              <h1 style="background-color: springgreen" id="embedded-content">
                 &lt;h1&gt;Embedded Content&lt;/h1&gt;
               </h1>
             </header>
@@ -627,7 +654,7 @@ P R E F O R M A T T E D T E X T
                 <header><h3>&lt;h3&gt;Image Element&lt;h3&gt;</h3></header>
 
                 <p>
-                  <code>&lt;Image&gt;</code> element, with a
+                  <code>&lt;Img&gt;</code> element, with a
                   <code>&lt;figcaption&gt;</code>
                 </p>
                 <figure>
@@ -643,7 +670,14 @@ P R E F O R M A T T E D T E X T
                     here&lt;/figcaption&gt;
                   </figcaption>
                 </figure>
+                <br>
+                <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img"
+                target="_blank"
+                >More Info</a
+              >
               </div>
+              
               <div>
                 <header><h3>&lt;h3&gt;Picture Element&lt;h3&gt;</h3></header>
 
@@ -660,7 +694,7 @@ P R E F O R M A T T E D T E X T
                   different display/device scenarios.
                 </p>
                 <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img"
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture"
                   target="_blank"
                   >More Info</a
                 >
@@ -672,6 +706,7 @@ P R E F O R M A T T E D T E X T
               <p>&lt;audio controls="link to audio"&gt;Audio&lt;/audio&gt;</p>
 
               <div><audio controls="">audio</audio></div>
+              <br>
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio"
                 target="_blank"
@@ -685,6 +720,7 @@ P R E F O R M A T T E D T E X T
               <p>&lt;video controls="link to video"&gt;Video&lt;/video&gt;</p>
 
               <div><video controls="">video</video></div>
+              <br>
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video"
                 target="_blank"
@@ -902,6 +938,7 @@ P R E F O R M A T T E D T E X T
                   data="everyElement.html"
                 ></object>
                 <br />
+                <br />
                 <a
                   href="https://www.w3schools.com/tags/tag_object.asp"
                   target="_blank"
@@ -913,7 +950,7 @@ P R E F O R M A T T E D T E X T
           </section>
           <section id="forms">
             <header>
-              <h1 style="background-color: springgreen">
+              <h1 style="background-color: springgreen" id="form-elements">
                 &lt;h1&gt;Form Elements&lt;/h1&gt;
               </h1>
             </header>
@@ -1250,7 +1287,9 @@ P R E F O R M A T T E D T E X T
             <hr />
           </div>
           <div>
-            <h3>&lt;h3&gt;Further Resources for HTML&lt;/h3&gt;</h3>
+            <h3 id="further-resources-for-HTML">
+              &lt;h3&gt;Further Resources for HTML&lt;/h3&gt;
+            </h3>
 
             <ul>
               <li><a href="https://www.w3schools.com/html/">W3Schools</a></li>
