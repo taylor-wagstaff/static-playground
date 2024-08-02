@@ -115,3 +115,14 @@ hr {
   text-decoration: underline;
   font-weight: 400;
 }
+
+form {
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+fieldset {
+  margin-bottom: 1rem;
+}
