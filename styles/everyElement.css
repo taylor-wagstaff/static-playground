@@ -111,6 +111,7 @@ hr {
 #content-heading {
   background-color: snow;
   margin: 0;
+  padding-bottom: 0;
   color: blue;
   text-decoration: underline;
   font-weight: 400;
