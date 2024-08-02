@@ -56,8 +56,6 @@ h6 {
   padding: 1rem;
 }
 
-
-
 .headings {
   display: flex;
   flex-direction: column;
@@ -66,13 +64,18 @@ h6 {
 table {
   border-collapse: collapse;
   table-layout: fixed;
-  width: 100%;
+  width: auto;
 }
 
 td,
 th {
   border: 1px solid black; /* Set border style */
-  padding: 8px; /* Add padding for better readability */
+  padding: 0.8rem; /* Add padding for better readability */
+  text-align: left;
+}
+
+th {
+  background-color: rgb(236, 234, 234);
 }
 
 .formatted-texts {
