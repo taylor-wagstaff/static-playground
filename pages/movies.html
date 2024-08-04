@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/movies.css" />
+    <!-- <script type="module" defer src="../modules/test.js"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Fav Movies</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="table_component" role="region" tabindex="0">
+        <table>
+          <caption>
+            Fav Movies
+          </caption>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Director</th>
+              <th>Year</th>
+              <th>Runtime</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://www.imdb.com/title/tt0113277/">Heat</a></td>
+              <td>Michael Mann</td>
+              <td>1995</td>
+              <td>2h 50m</td>
+              <td>8.3/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0947798/">Black Swan</a>
+              </td>
+              <td>Darren Aronofsky</td>
+              <td>2010</td>
+              <td>1h 48m</td>
+              <td>8.0/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0133093/">The Matrix</a>
+              </td>
+              <td>Lana Wachowski & Lilly Wachowski</td>
+              <td>1999</td>
+              <td>2h 16m</td>
+              <td>8.7/10</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.imdb.com/title/tt1723811/">Shame</a></td>
+              <td>Steve McQueen</td>
+              <td>2011</td>
+              <td>1h 41m</td>
+              <td>7.2/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt1315981/">A Single Man</a>
+              </td>
+              <td>Tom Ford</td>
+              <td>2009</td>
+              <td>1h 39m</td>
+              <td>7.5/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0137523/">Fight Club</a>
+              </td>
+              <td>David Fincher</td>
+              <td>1999</td>
+              <td>2h 19m</td>
+              <td>8.8/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0816692/">Interstellar</a>
+              </td>
+              <td>Christopher Nolan</td>
+              <td>2014</td>
+              <td>2h 49m</td>
+              <td>8.7/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0087544/"
+                  >Nausicaä of the Valley of the Wind</a
+                >
+              </td>
+              <td>Hayao Miyazaki</td>
+              <td>1984</td>
+              <td>1h 57m</td>
+              <td>8.0/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt8613070/"
+                  >Portrait of a Lady on Fire</a
+                >
+              </td>
+              <td>Céline Sciamma</td>
+              <td>2019</td>
+              <td>2h 2m</td>
+              <td>8.1/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt2452254/"
+                  >Clouds of Sils Maria</a
+                >
+              </td>
+              <td>Olivier Assayas</td>
+              <td>2014</td>
+              <td>2h 4m</td>
+              <td>6.8/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a
+                  href="https://www.imdb.com/title/tt0493402/?ref_=nm_flmg_t_14_wr"
+                  >Boarding Gate</a
+                >
+              </td>
+              <td>Olivier Assayas</td>
+              <td>2007</td>
+              <td>1h 46m</td>
+              <td>5.1/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0387898/"
+                  >Hidden (Caché)</a
+                >
+              </td>
+              <td>Michael Haneke</td>
+              <td>2005</td>
+              <td>1h 57m</td>
+              <td>7.3/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0808279/">Funny Games</a>
+              </td>
+              <td>Michael Haneke</td>
+              <td>2007</td>
+              <td>1h 51m</td>
+              <td>6.5/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0963178/"
+                  >The International</a
+                >
+              </td>
+              <td>Tom Tykwer</td>
+              <td>2009</td>
+              <td>1h 58m</td>
+              <td>6.5/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0466893/">Margaret</a>
+              </td>
+              <td>Kenneth Lonergan</td>
+              <td>2011</td>
+              <td>2h 30m</td>
+              <td>6.5/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0266697/"
+                  >Kill Bill: Vol. 1</a
+                >
+              </td>
+              <td>Quentin Tarantino</td>
+              <td>2003</td>
+              <td>1h 51m</td>
+              <td>8.2/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt1596363/"
+                  >The Big Short</a
+                >
+              </td>
+              <td>Adam McKay</td>
+              <td>2015</td>
+              <td>2h 10m</td>
+              <td>7.8/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt1615147/">Margin Call</a>
+              </td>
+              <td>J.C. Chandor</td>
+              <td>2011</td>
+              <td>1h 47m</td>
+              <td>7.1/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0381681/"
+                  >Before Sunset</a
+                >
+              </td>
+              <td>Richard Linklater</td>
+              <td>2004</td>
+              <td>1h 20m</td>
+              <td>8.1/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt1065073/?ref_=nm_knf_t_4"
+                  >Boyhood</a
+                >
+              </td>
+              <td>Richard Linklater</td>
+              <td>2014</td>
+              <td>2h 45m</td>
+              <td>7.9/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0125439/">Notting Hill</a>
+              </td>
+              <td>Roger Michell</td>
+              <td>1999</td>
+              <td>2h 4m</td>
+              <td>7.2/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0109831/"
+                  >Four Weddings and a Funeral</a
+                >
+              </td>
+              <td>Mike Newell</td>
+              <td>1994</td>
+              <td>1h 57m</td>
+              <td>7.1/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0251127/"
+                  >How to Lose a Guy in 10 Days</a
+                >
+              </td>
+              <td>Donald Petrie</td>
+              <td>2003</td>
+              <td>1h 56m</td>
+              <td>6.5/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0147800/"
+                  >10 Things I Hate About You</a
+                >
+              </td>
+              <td>Gil Junger</td>
+              <td>1999</td>
+              <td>1h 37m</td>
+              <td>7.3/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0075686/">Annie Hall</a>
+              </td>
+              <td>Woody Allen</td>
+              <td>1977</td>
+              <td>1h 33m</td>
+              <td>8.0/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0086984/">Body Double</a>
+              </td>
+              <td>Brian De Palma</td>
+              <td>1984</td>
+              <td>1h 54m</td>
+              <td>6.8/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0101765/"
+                  >The Double Life of Véronique</a
+                >
+              </td>
+              <td>Krzysztof Kieslowski</td>
+              <td>1991</td>
+              <td>1h 38m</td>
+              <td>7.7/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0209933/">Beau Travail</a>
+              </td>
+              <td>Claire Denis</td>
+              <td>1999</td>
+              <td>1h 32m</td>
+              <td>7.3/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0318761/">Thumbsucker</a>
+              </td>
+              <td>Mike Mills</td>
+              <td>2005</td>
+              <td>1h 36m</td>
+              <td>6.5/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0253867/"
+                  >The Sweetest Thing</a
+                >
+              </td>
+              <td>Roger Kumble</td>
+              <td>2002</td>
+              <td>1h 24m</td>
+              <td>5.2/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0108394/"
+                  >Three Colors: Blue</a
+                >
+              </td>
+              <td>Krzysztof Kieslowski</td>
+              <td>1993</td>
+              <td>1h 34m</td>
+              <td>7.8/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0111507/"
+                  >Three Colors: White</a
+                >
+              </td>
+              <td>Krzysztof Kieslowski</td>
+              <td>1994</td>
+              <td>1h 32m</td>
+              <td>7.6/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0111495/"
+                  >Three Colours: Red</a
+                >
+              </td>
+              <td>Krzysztof Kieslowski</td>
+              <td>1994</td>
+              <td>1h 39m</td>
+              <td>8.1/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0169547/"
+                  >American Beauty</a
+                >
+              </td>
+              <td>Sam Mendes</td>
+              <td>1999</td>
+              <td>2h 2m</td>
+              <td>8.3/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt10199586/">Atlantics</a>
+              </td>
+              <td>Mati Diop</td>
+              <td>2019</td>
+              <td>1h 46m</td>
+              <td>6.7/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt5726616/"
+                  >Call Me by Your Name</a
+                >
+              </td>
+              <td>Luca Guadagnino</td>
+              <td>2017</td>
+              <td>2h 12m</td>
+              <td>7.8/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a
+                  href="https://www.imdb.com/title/tt0376541/?ref_=nv_sr_srsg_3_tt_8_nm_0_in_0_q_closer"
+                  >Closer</a
+                >
+              </td>
+              <td>Mike Nichols</td>
+              <td>2004</td>
+              <td>1h 44m</td>
+              <td>7.2/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0246578/?ref_=fn_al_tt_1"
+                  >Donnie Darko</a
+                >
+              </td>
+              <td>Richard Kelly</td>
+              <td>2001</td>
+              <td>1h 53m</td>
+              <td>8.0/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0338013/"
+                  >Eternal Sunshine of the Spotless Mind</a
+                >
+              </td>
+              <td>Michel Gondry</td>
+              <td>2004</td>
+              <td>1h 48m</td>
+              <td>8.3/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0068646/"
+                  >The Godfather</a
+                >
+              </td>
+              <td>Francis Ford Coppola</td>
+              <td>1972</td>
+              <td>2h 55m</td>
+              <td>9.2/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0120663/"
+                  >Eyes Wide Shut</a
+                >
+              </td>
+              <td>Stanley Kubrick</td>
+              <td>1999</td>
+              <td>2h 29m</td>
+              <td>7.5/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0159097/"
+                  >The Virgin Suicides</a
+                >
+              </td>
+              <td>Sofia Coppola</td>
+              <td>1999</td>
+              <td>1h 37m</td>
+              <td>7.2/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt1527186/">Melancholia</a>
+              </td>
+              <td>Lars von Trier</td>
+              <td>2011</td>
+              <td>2h 15m</td>
+              <td>7.1/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0166924/"
+                  >Mulholland Drive</a
+                >
+              </td>
+              <td>David Lynch</td>
+              <td>2001</td>
+              <td>2h 27m</td>
+              <td>7.9/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt3966404/">Mustang</a>
+              </td>
+              <td>Deniz Gamze Ergüven</td>
+              <td>2015</td>
+              <td>1h 37m</td>
+              <td>7.6/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0151804/">Office Space</a>
+              </td>
+              <td>Mike Judge</td>
+              <td>1999</td>
+              <td>1h 29m</td>
+              <td>7.6/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt6751668/">Parasite</a>
+              </td>
+              <td>Bong Joon Ho</td>
+              <td>2019</td>
+              <td>2h 12m</td>
+              <td>8.5/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt1440232/"
+                  >Little White Lies</a
+                >
+              </td>
+              <td>Guillaume Canet</td>
+              <td>2010</td>
+              <td>2h 34m</td>
+              <td>7.1/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0103064/?ref_=fn_al_tt_2"
+                  >Terminator 2: Judgment Day</a
+                >
+              </td>
+              <td>James Cameron</td>
+              <td>1991</td>
+              <td>2h 17m</td>
+              <td>8.6/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0163978/">The Beach</a>
+              </td>
+              <td>Danny Boyle</td>
+              <td>2000</td>
+              <td>1h 59m</td>
+              <td>6.6/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0470752/">Ex Machina</a>
+              </td>
+              <td>Alex Garland</td>
+              <td>2014</td>
+              <td>1h 48m</td>
+              <td>7.7/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a
+                  href="https://www.imdb.com/title/tt1160419/?ref_=nv_sr_srsg_6_tt_8_nm_0_in_0_q_dune"
+                  >Dune: Part One</a
+                >
+              </td>
+              <td>Denis Villeneuve</td>
+              <td>2021</td>
+              <td>2h 35m</td>
+              <td>8.0/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0254686/"
+                  >The Piano Teacher</a
+                >
+              </td>
+              <td>Michael Haneke</td>
+              <td>2001</td>
+              <td>2h 11m</td>
+              <td>7.5/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0119177/">Gattaca</a>
+              </td>
+              <td>Andrew Niccol</td>
+              <td>1997</td>
+              <td>1h 46m</td>
+              <td>7.7/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt7322224/"
+                  >Triangle of Sadness</a
+                >
+              </td>
+              <td>Ruben Östlund</td>
+              <td>2022</td>
+              <td>2h 27m</td>
+              <td>7.3/10</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.imdb.com/title/tt0387514/">Prime</a></td>
+              <td>Ben Younger</td>
+              <td>2005</td>
+              <td>1h 45m</td>
+              <td>6.2/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0120148/"
+                  >Sliding Doors</a
+                >
+              </td>
+              <td>Peter Howitt</td>
+              <td>1998</td>
+              <td>1h 39m</td>
+              <td>6.7/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt1226236/">I Am Love</a>
+              </td>
+              <td>Luca Guadagnino</td>
+              <td>2009</td>
+              <td>2h 0m</td>
+              <td>7.0/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0107756/">Orlando</a>
+              </td>
+              <td>Sally Potter</td>
+              <td>1992</td>
+              <td>1h 34m</td>
+              <td>7.1/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt1034415/">Suspiria</a>
+              </td>
+              <td>Luca Guadagnino</td>
+              <td>2018</td>
+              <td>2h 32m</td>
+              <td>6.7/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0172495/">Gladiator</a>
+              </td>
+              <td>Ridley Scott</td>
+              <td>2000</td>
+              <td>2h 35m</td>
+              <td>8.5/10</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.imdb.com/title/tt0078748/">Alien</a></td>
+              <td>Ridley Scott</td>
+              <td>1979</td>
+              <td>1h 57m</td>
+              <td>8.5/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0320661/">
+                  Kingdom of Heaven</a
+                >
+              </td>
+              <td>Ridley Scott</td>
+              <td>2005</td>
+              <td>2h 24m</td>
+              <td>7.3/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt1937390/"
+                  >Nymphomaniac: Vol. I</a
+                >
+              </td>
+              <td>Lars von Trier</td>
+              <td>2013</td>
+              <td>1h 57m</td>
+              <td>6.9/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt10370710/"
+                  >The Worst Person in the World</a
+                >
+              </td>
+              <td>Joachim Trier</td>
+              <td>2021</td>
+              <td>2h 8m</td>
+              <td>7.7/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt2053463/">Side Effects</a>
+              </td>
+              <td>Steven Soderbergh</td>
+              <td>2013</td>
+              <td>1h 46m</td>
+              <td>7.1/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt18816518/"
+                  >Sick of Myself</a
+                >
+              </td>
+              <td>Kristoffer Borgli</td>
+              <td>2022</td>
+              <td>1h 37m</td>
+              <td>7.1/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0440963/"
+                  >The Bourne Ultimatum</a
+                >
+              </td>
+              <td>Paul Greengrass</td>
+              <td>2007</td>
+              <td>1h 55m</td>
+              <td>8.0/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0070644/"
+                  >Scenes from a Marriage</a
+                >
+              </td>
+              <td>Ingmar Bergman</td>
+              <td>1973</td>
+              <td>51m</td>
+              <td>8.5/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0083922/"
+                  >Fanny and Alexander</a
+                >
+              </td>
+              <td>Ingmar Bergman</td>
+              <td>1982</td>
+              <td>3h 8m</td>
+              <td>8.1/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0072443/">Mirror</a>
+              </td>
+              <td>Andrei Tarkovsky</td>
+              <td>1975</td>
+              <td>1h 47m</td>
+              <td>7.9/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0069293/?ref_=nm_knf_t_2"
+                  >Solaris</a
+                >
+              </td>
+              <td>Andrei Tarkovsky</td>
+              <td>1972</td>
+              <td>2h 47m</td>
+              <td>7.9/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt3655522/">Girlhood</a>
+              </td>
+              <td>Céline Sciamma</td>
+              <td>2014</td>
+              <td>1h 53m</td>
+              <td>6.9/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0434409/"
+                  >V for Vendetta</a
+                >
+              </td>
+              <td>James McTeigue</td>
+              <td>2005</td>
+              <td>2h 12m</td>
+              <td>8.1/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0206634/"
+                  >Children of Men</a
+                >
+              </td>
+              <td>Alfonso Cuarón</td>
+              <td>2006</td>
+              <td>1h 49m</td>
+              <td>7.9m</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0842926/"
+                  >The Kids Are All Right</a
+                >
+              </td>
+              <td>Lisa Cholodenko</td>
+              <td>2010</td>
+              <td>1h 46m</td>
+              <td>7.0/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt2278871/"
+                  >Blue Is the Warmest Colour</a
+                >
+              </td>
+              <td>Abdellatif Kechiche</td>
+              <td>2013</td>
+              <td>3h</td>
+              <td>7.7/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt2436452/">Exhibition</a>
+              </td>
+              <td>Joanna Hogg</td>
+              <td>2013</td>
+              <td>1h 44m</td>
+              <td>5.8/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0047478/"
+                  >Seven Samurai</a
+                >
+              </td>
+              <td>Akira Kurosawa</td>
+              <td>1954</td>
+              <td>3h 37m</td>
+              <td>8.6/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0102926/"
+                  >The Silence of the Lambs</a
+                >
+              </td>
+              <td>Jonathan Demme</td>
+              <td>1991</td>
+              <td>1h 58m</td>
+              <td>8.6/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt11198810/">She Said</a>
+              </td>
+              <td>Maria Schrader</td>
+              <td>2022</td>
+              <td>2h 9m</td>
+              <td>7.3/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt9620292/"
+                  >Promising Young Woman</a
+                >
+              </td>
+              <td>Emerald Fennell</td>
+              <td>2020</td>
+              <td>1h 53m</td>
+              <td>7.5/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0120728/"
+                  >The Last Days of Disco</a
+                >
+              </td>
+              <td>Whit Stillman</td>
+              <td>1998</td>
+              <td>1h 53m</td>
+              <td>6.7/10</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.imdb.com/title/tt0414387/"
+                  >Pride & Prejudice</a
+                >
+              </td>
+              <td>Joe Wright</td>
+              <td>2005</td>
+              <td>2h 9m</td>
+              <td>7.8/10</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
