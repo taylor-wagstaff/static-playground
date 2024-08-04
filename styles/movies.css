@@ -24,6 +24,7 @@ p {
 .table_component {
   overflow: auto;
   width: 100%;
+  margin-bottom: 3rem;
 }
 
 .table_component table {
@@ -33,6 +34,7 @@ p {
   border-collapse: collapse;
   border-spacing: 1px;
   text-align: left;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .table_component caption {
@@ -68,4 +70,8 @@ p {
 
 a {
   text-underline-offset: 4px;
+}
+
+a:visited {
+  color:crimson;
 }
