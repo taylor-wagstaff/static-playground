@@ -1,0 +1,91 @@
+:root {
+  --size-md: clamp(1.125rem, 1.1rem + 0.5vw, 1.25rem);
+  --size-sm: clamp(0.75rem, 2vw + 1rem, 1.125rem);
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: var(--size-sm);
+  -webkit-font-smoothing: antialiased;
+  background-color: mintcream;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+#info {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: end;
+}
+
+/* table */
+
+.table_component {
+  overflow: auto;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.table_component table {
+  height: 100%;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 1px;
+  text-align: left;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.table_component caption {
+  caption-side: top;
+  text-align: left;
+  margin-top: 3rem;
+
+  font-weight: 600;
+
+  color: black;
+  padding: 1rem;
+}
+
+.table_component th {
+  background-color: black;
+  /* background-color: #63f8bfeb; */
+  color: snow;
+  padding: 5px;
+  word-wrap: break-word;
+  border: 1px solid black;
+}
+
+.table_component td {
+  border: 1px solid black;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  background-color: snow;
+}
+
+.table_component tr:hover td {
+  background-color: #eceff1;
+  /* background-color: #eceff1; */
+  transition: background-color 0.2s ease;
+  font-weight: 600;
+}
+
+a {
+  text-underline-offset: 4px;
+}
+
+a:visited {
+  color: crimson;
+}
